@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- values/colors.xml, values/strings.xml 에서 설정한 값 불러오기 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello"
+        android:textColor="@color/myColor"
+        android:textSize="60sp"
+        android:textStyle="italic" />
+
+    <!-- autoLink : 문자열에 맞는 링크 추가 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="web"
+        android:text="https://www.naver.com/"
+        android:textSize="50sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:autoLink="phone"
+        android:text="010-123-1234"
+        android:textSize="50sp" />
+
+    <!-- maxLines : 최대 표시할 줄 수 설정 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="3"
+        android:text="@string/koreaSong"
+        android:textSize="50sp" />
+
+    <!-- 경계선 표시할 때 유용한 view 태그 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000" />
+
+    <!-- singleLine : 여러 줄을 한 줄로 표시, ellipsize : [...] 표시 위치 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="@string/koreaSong"
+        android:textSize="40sp" />
+
+</LinearLayout>

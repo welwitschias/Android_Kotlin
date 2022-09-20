@@ -16,3 +16,5 @@ rootProject.name = "BusanItAndroid"
 include ':app'
 include ':basickotlin'
 include ':ex1_view'
+include ':ex1_kakaologin_page'
+include ':ex2_layout'

@@ -4,15 +4,31 @@ import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.example.ex1_view.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        // viewBinding 기법으로 화면 출력
+        // 바인딩 객체 획득 : XML 파일 이름의 첫 글자와 _ 뒤에 오는 글자를 대문자로 + Binding 추가
+        // 예) activity_main.xml → ActivityMainBinding, edit_text_view.xml → EditTextViewBinding
+        // layoutInflater : XML에 미리 정의해 둔 틀을 실제 메모리에 올려주는 역할
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
+        // XML 명시하여 화면 출력
+//        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.text_view)
+//        setContentView(R.layout.button_view)
+//        setContentView(R.layout.edit_text_view)
 
         // TextView 생성 : 일반적인 방법
 //        val name = TextView(this)
@@ -65,6 +81,47 @@ class MainActivity : AppCompatActivity() {
 
         // LinearLayout 객체를 화면에 출력
 //        setContentView(layout)
-        setContentView(R.layout.activity_main) // 화면 출력 XML 명시
+
+        // id 속성을 이용한 특정 뷰 제어 → findViewById()
+        // 변수에 타입을 지정한 방법
+//        val name1: TextView = findViewById(R.id.name)
+//        name1.text = "id 속성을 이용한 특정 뷰 제어"
+
+        // findViewById() 함수에 제네릭을 추가한 방법
+//        val address1 = findViewById<TextView>(R.id.address)
+//        val image1 = findViewById<ImageView>(R.id.image1)
+//
+//        val visibleBtn = findViewById<Button>(R.id.visible_test)
+//        val invisibleBtn = findViewById<Button>(R.id.invisible_test)
+//        val goneBtn = findViewById<Button>(R.id.gone_test)
+//
+//        visibleBtn.setOnClickListener {
+//            image1.visibility = View.VISIBLE
+//        }
+//
+//        invisibleBtn.setOnClickListener {
+//            image1.visibility = View.INVISIBLE
+//        }
+//
+//        goneBtn.setOnClickListener {
+//            image1.visibility = View.GONE
+//        }
+
+        // id 속성을 이용한 특정 뷰 제어 - 바인딩 기법 활용
+        val image1 = binding.image1
+        val visibleBtn = binding.visibleTest
+        visibleBtn.setOnClickListener {
+            image1.visibility = View.VISIBLE
+        }
+
+        val invisibleBtn = binding.invisibleTest
+        invisibleBtn.setOnClickListener {
+            image1.visibility = View.INVISIBLE
+        }
+
+        // 변수 선언 없이 binding.[id] 이용하여 뷰 제어 가능
+        binding.goneTest.setOnClickListener {
+            image1.visibility = View.GONE
+        }
     }
 }
