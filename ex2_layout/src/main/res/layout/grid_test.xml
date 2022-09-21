@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="3"
+    android:orientation="horizontal">
+
+    <!-- LinearLayout과 다르게 자동으로 줄바꿈 -->
+    <!-- orientation : 배치방향(가로, 세로) -->
+    <!-- columnCount : 가로로 나열할 뷰의 수 (주로 horizontal과 같이 사용) -->
+    <!-- rowCount : 세로로 나열할 뷰의 수 (주로 vertical과 같이 사용) -->
+    <!--    <Button android:text="A" />-->
+    <!--    <Button android:text="B" />-->
+    <!--    <Button android:text="C" />-->
+    <!--    <Button android:text="D" />-->
+    <!--    <Button android:text="E" />-->
+
+    <!-- 특정 뷰의 위치 조정 -->
+    <!-- layout_row : 뷰가 위치하는 세로 방향 인덱스 -->
+    <!-- layout_column : 뷰가 위치하는 가로 방향 인덱스 -->
+    <!--    <Button android:text="A" />-->
+    <!--    <Button android:text="B" />-->
+    <!--    <Button-->
+    <!--        android:layout_row="1"-->
+    <!--        android:layout_column="1"-->
+    <!--        android:text="C" />-->
+    <!--    <Button android:text="D" />-->
+    <!--    <Button android:text="E" />-->
+
+    <!-- 특정 뷰의 크기 확장하기 -->
+    <!-- layout_gravity : 뷰의 정렬뿐만 아니라 뷰의 크기도 조정 가능함 -->
+    <!--    <Button android:text="A" />-->
+    <!--    <Button android:text="HELLOWORLD HELLOWORLD" />-->
+    <!--    <Button android:text="C" />-->
+    <!--    <Button android:text="D" />-->
+    <!--    <Button-->
+    <!--        android:layout_gravity="fill_horizontal"-->
+    <!--        android:text="E" />-->
+
+    <!-- 한 칸에 여러 개의 뷰를 표시 -->
+    <!-- layout_row, layout_column, layout_gravity 이용 -->
+    <!--    <Button android:text="A" />-->
+    <!--    <Button android:text="HELLOWORLD HELLOWORLD" />-->
+    <!--    <Button android:text="C" />-->
+    <!--    <Button android:text="D" />-->
+    <!--    <Button android:text="E" />-->
+    <!--    <Button-->
+    <!--        android:layout_row="1"-->
+    <!--        android:layout_column="1"-->
+    <!--        android:layout_gravity="right"-->
+    <!--        android:text="F" />-->
+
+    <!-- 행, 열 병합 -->
+    <!-- layout_columnSpan(가로), layout_rowSpan(세로), layout_gravity 이용 -->
+        <Button
+            android:layout_rowSpan="2"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="A" />
+        <Button android:text="B" />
+        <Button android:text="C" />
+        <Button android:text="D" />
+        <Button android:text="E" />
+        <Button android:text="F" />
+
+</GridLayout>

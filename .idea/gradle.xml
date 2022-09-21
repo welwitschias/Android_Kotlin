@@ -15,7 +15,10 @@
             <option value="$PROJECT_DIR$/basickotlin" />
             <option value="$PROJECT_DIR$/ex1_kakaologin_page" />
             <option value="$PROJECT_DIR$/ex1_view" />
+            <option value="$PROJECT_DIR$/ex2_keypad" />
             <option value="$PROJECT_DIR$/ex2_layout" />
+            <option value="$PROJECT_DIR$/ex3_event" />
+            <option value="$PROJECT_DIR$/ex3_stopwatch" />
           </set>
         </option>
       </GradleProjectSettings>
