@@ -14,12 +14,14 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/jja"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="짜장면"
             android:textSize="30sp" />
 
         <RadioButton
+            android:id="@+id/jjam"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="짬뽕"

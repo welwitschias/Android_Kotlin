@@ -230,14 +230,40 @@ class MainActivity : AppCompatActivity() {
         }
 
         // 커스텀 다이얼로그 출력
+//        binding.customBtn.setOnClickListener {
+//            val dialogBinding = DialogCustomBinding.inflate(layoutInflater)
+//            AlertDialog.Builder(this).run {
+//                setTitle("커스텀 다이얼로그")
+//                setView(dialogBinding.root)
+//                setPositiveButton("확인", object : DialogInterface.OnClickListener {
+//                    override fun onClick(p0: DialogInterface?, p1: Int) {
+//                        if (dialogBinding.jja.isChecked === true) {
+//                            Log.d("myLog", "짜장면 선택")
+//                        } else {
+//                            Log.d("myLog", "짬뽕 선택")
+//                        }
+//                    }
+//                })
+//                show()
+//            }
+//        }
+
+        // 커스텀 다이얼로그 출력(람다식 이용)
         binding.customBtn.setOnClickListener {
             val dialogBinding = DialogCustomBinding.inflate(layoutInflater)
             AlertDialog.Builder(this).run {
                 setTitle("커스텀 다이얼로그")
                 setView(dialogBinding.root)
-                setPositiveButton("확인", null)
+                setPositiveButton("확인") { p0, p1 ->
+                    if (dialogBinding.jja.isChecked === true) {
+                        Log.d("myLog", "짜장면 선택")
+                    } else {
+                        Log.d("myLog", "짬뽕 선택")
+                    }
+                }
                 show()
             }
         }
+
     }
 }
