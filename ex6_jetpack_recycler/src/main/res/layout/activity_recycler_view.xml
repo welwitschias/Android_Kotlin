@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/itemData"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="100dp"-->
+    <!--        android:layout_margin="15dp"-->
+    <!--        android:background="#E91E63"-->
+    <!--        android:textSize="24sp" />-->
+
+    <!-- 아이템 데코레이션 테스트 -->
+    <TextView
+        android:id="@+id/itemData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

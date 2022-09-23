@@ -22,6 +22,8 @@
             <option value="$PROJECT_DIR$/ex4_resource" />
             <option value="$PROJECT_DIR$/ex4_resource_edu" />
             <option value="$PROJECT_DIR$/ex5_noti" />
+            <option value="$PROJECT_DIR$/ex6_jetpack" />
+            <option value="$PROJECT_DIR$/ex6_jetpack_recycler" />
           </set>
         </option>
       </GradleProjectSettings>
