@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ex6_jetpack_prac</string>
+    <string name="drawer_opened">opened drawer</string>
+    <string name="drawer_closed">closed drawer</string>
+    <string name="hello_blank_fragment">hello blank fragment</string>
+</resources>
