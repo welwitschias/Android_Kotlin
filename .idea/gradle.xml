@@ -25,6 +25,9 @@
             <option value="$PROJECT_DIR$/ex6_jetpack" />
             <option value="$PROJECT_DIR$/ex6_jetpack_prac" />
             <option value="$PROJECT_DIR$/ex6_jetpack_recycler" />
+            <option value="$PROJECT_DIR$/ex7_mat_edu" />
+            <option value="$PROJECT_DIR$/ex7_mat_prac" />
+            <option value="$PROJECT_DIR$/ex8_component" />
           </set>
         </option>
       </GradleProjectSettings>
