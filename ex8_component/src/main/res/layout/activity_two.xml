@@ -13,4 +13,39 @@
         android:layout_height="wrap_content"
         android:text="홈 화면으로 이동" />
 
+    <Button
+        android:id="@+id/showBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="show btn" />
+
+    <Button
+        android:id="@+id/hideBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hide btn" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#C5E1A5"
+        android:text="text1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFCC80"
+        android:text="text2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#81D4FA"
+        android:text="text3" />
+
+    <EditText
+        android:id="@+id/editView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
 </LinearLayout>
