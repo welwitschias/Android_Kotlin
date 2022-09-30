@@ -4,8 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.DividerItemDecoration
@@ -17,6 +15,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var adapter: MyAdapter
     var datas: MutableList<String>? = null
 
+    @SuppressLint("Recycle")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -35,9 +34,15 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddActivity::class.java)
             requestLauncher.launch(intent)
         }
-        datas = mutableListOf<String>()
 
-        val db = DBHelper(this).readableDatabase
+//        datas = savedInstanceState?.let {
+//            it.getStringArrayList("datas")?.toMutableList()
+//        } ?: let {
+//            mutableListOf()
+//        }
+
+        datas = mutableListOf()
+        val db = DBHelper(this).writableDatabase
         val cursor = db.rawQuery("select * from TODO_TB", null)
         cursor.run {
             while (moveToNext()) {
@@ -52,18 +57,5 @@ class MainActivity : AppCompatActivity() {
         binding.mainRecyclerView.addItemDecoration(
             DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
         )
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == R.id.menu_main_setting) {
-            val intent = Intent(this, SettingActivity::class.java)
-            startActivity(intent)
-        }
-        return super.onOptionsItemSelected(item)
     }
 }

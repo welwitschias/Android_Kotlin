@@ -16,20 +16,22 @@
         android:id="@+id/item_data"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="20dp"
         android:layout_weight="1"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <Button
-        android:id="@+id/update"
-        android:layout_width="80dp"
+        android:id="@+id/updateBtn"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:text="수정" />
+        android:text="수정"
+        android:visibility="gone"
+        android:layout_marginRight="5dp"/>
 
     <Button
-        android:id="@+id/delete"
-        android:layout_width="80dp"
+        android:id="@+id/deleteBtn"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:text="삭제" />
 

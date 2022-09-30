@@ -24,14 +24,20 @@ class AddActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
             R.id.menu_add_save -> {
-                val inputData = binding.addEditView.text.toString()
-                val db = DBHelper(this).writableDatabase
-                db.execSQL("insert into TODO_TB(todo) values(?)", arrayOf<String>(inputData))
-                db.close()
-
                 val intent = intent
-                intent.putExtra("result", inputData)
-                setResult(Activity.RESULT_OK, intent)
+                val inputData = binding.addEditView.text.toString()
+
+                if (inputData.isBlank()) {
+                    // 할 일 입력값이 없을 때
+                    setResult(Activity.RESULT_CANCELED, intent)
+                } else {
+                    // 할 일 입력값이 있을 때
+                    val db = DBHelper(this).writableDatabase
+                    db.execSQL("insert into TODO_TB(todo) values(?)", arrayOf(inputData))
+                    db.close()
+                    intent.putExtra("result", inputData)
+                    setResult(Activity.RESULT_OK, intent)
+                }
                 finish()
                 true
             }
