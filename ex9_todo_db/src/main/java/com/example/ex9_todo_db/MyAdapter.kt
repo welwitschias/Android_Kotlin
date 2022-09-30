@@ -54,7 +54,7 @@ class MyAdapter(val datas: MutableList<String>?) : RecyclerView.Adapter<Recycler
                 deleteDB.execSQL("delete from TODO_TB where todo = ?", arrayOf(data))
                 deleteDB.close()
 
-                datas.remove(datas!![position])
+                datas.remove(datas[position])
                 notifyDataSetChanged()
             } catch (e: Exception) {
                 e.printStackTrace()

@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         @SuppressLint("NotifyDataSetChanged")
         val requestLauncher: ActivityResultLauncher<Intent> =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-                it.data!!.getStringExtra("result")?.let {
+                it.data?.getStringExtra("result")?.let {
                     datas?.add(it)
                     adapter.notifyDataSetChanged()
                 }
