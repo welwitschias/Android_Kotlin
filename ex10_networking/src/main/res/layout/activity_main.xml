@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal">
+
+    <Button
+        android:id="@+id/get_req"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get query"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/get_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get path"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/get_queryMap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get queryMap"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/glide_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="glide test"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:id="@+id/glide_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
